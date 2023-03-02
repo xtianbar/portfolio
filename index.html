@@ -16,7 +16,12 @@
 
 </head>
 <body>
-  
+
+  <!-- BACK TO TOP -->
+    <div id="progress">
+      <span id="progress-value"><i class="bi bi-arrow-up"></i></span>
+    </div>
+
   <!-- NAVIGATION -->
   <header id="header">
   <nav id="navbar" class="navbar navbar-expand-lg fixed-top">
@@ -659,32 +664,12 @@
 
   </main><!-- End #main -->
 
-  <a href="#" class="back-to-top mb-4 px-5"><i class="bi bi-box-arrow-in-up"></i></a>
   <!-- BOOTSTRAP JS/POPPER -->
   <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
   <script src="./node_modules/@popperjs/core/dist/umd/popper.js"></script>
   <!-- SCROLL TO JS -->
   <script src="./assets/js/custom.js"></script>
-  <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
   <script>
-    jQuery(document).ready(function() {
-  var offset = 300;
-  var duration = 500;
-  jQuery(window).scroll(function() {
-      if (jQuery(this).scrollTop() > offset) {
-          jQuery('.back-to-top').fadeIn(duration);
-      } else {
-          jQuery('.back-to-top').fadeOut(duration);
-      }
-  });
-  
-  jQuery('.back-to-top').click(function(event) {
-      event.preventDefault();
-      jQuery('html, body').animate({scrollTop: 0}, duration);
-      return false;
-  })
-});
-
     function scrollValue(){
     var navbar = document.getElementById('navbar');
     var scroll = window.scrollY;
