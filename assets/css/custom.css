@@ -404,14 +404,21 @@ a {
 }
 
 
-
-/* fiaudhawudhwuhdwudhad */
+/* MAIN */
 
 #main {
-  margin-left: 330px;
   color: var(--bg-clr-dark);
+  margin-left: 330px;
 }
-@media (max-width: 1199px) {
+
+
+@media (min-width: 992px) {
+  #main {
+    margin-left: 330px;
+  }
+}
+
+@media (max-width: 991px) {
   #main {
     margin-left: 0;
   }
@@ -481,10 +488,12 @@ section {
 .about .content ul i {
   font-size: 16px;
   margin-right: 5px;
-  color: var(--secondary-clr);
+  color: var(--bg-clr-muted);
   line-height: 0;
 }
-
+.about .content ul li span, .about-me {
+  color: var(--secondary-clr);
+}
 .about .content p:last-child {
   margin-bottom: 0;
 }
@@ -492,13 +501,12 @@ section {
 #about .btn {
   background-color: transparent;
   border: transparent;
-  color: var(--bg-clr-dark);
   text-decoration: underline;
   text-underline-offset: 0.2rem;
   font-size: 0.7rem;
 }
 #about .btn:hover {
-  color: var(--secondary-clr);
+  opacity: 0.9;
 }
 
 /*--------------------------------------------------------------
