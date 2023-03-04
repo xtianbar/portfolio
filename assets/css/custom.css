@@ -181,7 +181,16 @@ a {
   .nav-link:active, .nav-link:visited, .nav-link:link {
     color: var(--bg-clr-light);
   }
-  
+  .section-title h2::after {
+    content: "";
+position: absolute;
+display: block;
+width: 100%;
+height: 3px;
+background: var(--bg-clr-2);
+bottom: 2.3rem;
+left: 8.5rem;
+  }
 }
 @media (max-width: 991px){
 
@@ -203,7 +212,7 @@ a {
 
   .cool-link {
     text-decoration: none;
-    color: var(--bg-clr-light);
+    color: var(--bg-clr-muted);
     cursor: pointer;
   }
   
@@ -217,13 +226,45 @@ a {
   }
   
   .cool-link:hover::after {
-    width: 10%;
+    width: 12%;
   }
   
   .sns-icons-collapse:hover {
     transform: scale(1.2);
   }
+  .section-title {
+    text-align: center;
+  }
+  .section-title h2::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 120px;
+    height: 0.2rem;
+    background: var(--bg-clr-dark);
+    bottom: 1px;
+    left: calc(50% - 60px);
+  }
+  .section-title h2::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 0.5rem;
+    background: var(--bg-clr-muted);
+    bottom: 0;
+    left: calc(50% - 20px);
+  }
 }
+
+.navbar-nav .show > .nav-link, .navbar-nav .nav-link.active {
+  color: #c1bfbf;
+  text-decoration: underline;
+  text-decoration-style: double;
+  text-underline-offset: 0.35rem;
+  font-weight: var(--fw-bold);
+}
+
 /* ------------- */
 
 
@@ -450,16 +491,16 @@ section {
   color: var(--primary-clr);
 }
 
-.section-title h2::after {
+/* .section-title h2::after {
   content: "";
   position: absolute;
   display: block;
-  width: 50px;
+  width: 100%;
   height: 3px;
   background:var(--bg-clr-2);
-  bottom: 0;
-  left: 0;
-}
+  bottom: 2.3rem;
+  left: 8.5rem;
+} */
 
 .section-title p {
   margin-bottom: 0;
@@ -468,37 +509,35 @@ section {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
-.about .content h3 {
-  font-weight: 700;
+.about h3 {
+  font-weight: var(--fw-bold);
   font-size: var(--fs-500);
   color: var(--bg-clr-dark);
 }
-
-.about .content ul {
-  list-style: none;
-  padding: 0;
+.about h3 span {
+  text-transform: uppercase;
 }
 
-.about .content ul li {
+.about ul li {
   margin-bottom: 20px;
   display: flex;
   align-items: center;
+  font-size: var(--fs-350);
 }
 
-.about .content ul strong {
+.about ul strong {
   margin-right: 10px;
 }
 
-.about .content ul i {
-  font-size: var(--fs-400);
+.about ul i {
   margin-right: 5px;
   color: var(--bg-clr-muted);
   line-height: 0;
 }
-.about .content ul li span, .about-me {
+.about ul li span, .about-me {
   color: var(--secondary-clr);
 }
-.about .content p:last-child {
+.about p:last-child {
   margin-bottom: 0;
 }
 
@@ -584,7 +623,7 @@ section {
 .resume .resume-item h5 {
   font-size: var(--fs-300);
   color: var(--bg-clr-light);
-  background: var(--bg-clr-dark);
+  background: var(--bg-clr-2);
   padding: 0.313rem 0.938rem;
   display: inline-block;
   font-weight: 600;
@@ -637,7 +676,7 @@ section {
   margin-bottom: 30px;
 }
 
-.portfolio #portfolio-filters {
+.portfolio #portfolio-flters {
   padding: 0;
   margin: 0 auto 35px auto;
   list-style: none;
@@ -647,7 +686,7 @@ section {
   padding: 2px 15px;
 }
 
-.portfolio #portfolio-filters li {
+.portfolio #portfolio-flters li {
   cursor: pointer;
   display: inline-block;
   padding: 10px 15px 8px 15px;
@@ -660,15 +699,15 @@ section {
   transition: all 0.3s ease-in-out;
 }
 
-.portfolio #portfolio-filters li:hover,
-.portfolio #portfolio-filters li.filter-active {
+.portfolio #portfolio-flters li:hover,
+.portfolio #portfolio-flters li.filter-active {
   color: var(--bg-clr-light);
   text-decoration: underline;
   text-underline-offset: 0.2rem;
   transition: all 0.5s ease;
 }
 
-.portfolio #portfolio-filters li:last-child {
+.portfolio #portfolio-flters li:last-child {
   margin-right: 0;
 }
 
@@ -677,19 +716,6 @@ section {
   position: relative;
   overflow: hidden;
   z-index: 1;
-}
-
-.portfolio .portfolio-wrap::before {
-  content: "";
-  background: rgba(255, 255, 255, 0.5);
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  transition: all ease-in-out 0.3s;
-  z-index: 2;
-  opacity: 0;
 }
 
 .portfolio .portfolio-wrap .portfolio-links {
@@ -708,17 +734,17 @@ section {
   color: #fff;
   font-size: 28px;
   text-align: center;
-  background: rgba(20, 157, 221, 0.75);
+  background:rgba(54, 54, 56, 0.9);
   transition: 0.3s;
   width: 50%;
 }
 
 .portfolio .portfolio-wrap .portfolio-links a:hover {
-  background: rgba(20, 157, 221, 0.95);
+  background:rgba(54, 54, 56, 0.8);
 }
 
 .portfolio .portfolio-wrap .portfolio-links a+a {
-  border-left: 1px solid #37b3ed;
+  border-left: 1px solid var(--bg-clr-2);
 }
 
 .portfolio .portfolio-wrap:hover::before {
