@@ -195,7 +195,7 @@ a {
   .nav-link:hover {
     scale: none;
     transition: 0.1ms ease;
-    color: var(--bg-clr-light);
+    color: var(--bg-clr-2);
   }
   .nav-link:active, .nav-link:visited, .nav-link:link {
     color: var(--bg-clr-light);
