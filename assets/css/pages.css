@@ -381,6 +381,9 @@ a {
     align-items: center;
     padding: 2rem 5rem 2rem 5rem;
   }
+ .about-list {
+   display:none;
+}
 }
 
   /*--------------------------------------------------------------
