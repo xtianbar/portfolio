@@ -275,6 +275,34 @@ a {
     left: 8.5rem;
   }
 
+@media (max-width: 991px){
+  .section-title {
+    text-align: center;
+  }
+  .section-title h2::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 20rem;
+    height: 0.2rem;
+    background: var(--bg-clr-light);
+    top: 3.33rem;
+    left: calc(50% - 10rem);
+  }
+  .section-title h2::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 6rem;
+    height: 0.8rem;
+    background: var(--bg-clr-muted);
+    top: 3rem;
+    left: calc(50% - 3rem);
+  }
+  .skills-content {
+    margin-top: 3rem;
+  }
+}
   /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
@@ -449,6 +477,185 @@ a {
   color: var(--bg-clr-dark);
 }
 
+
+/*--------------------------------------------------------------
+# About
+--------------------------------------------------------------*/
+.about h3 {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-600);
+  color: var(--bg-clr-light);
+}
+.about h3 span {
+  text-transform: uppercase;
+}
+
+.about ul li {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  font-size: var(--fs-350);
+}
+
+.about ul strong {
+  margin-right: 10px;
+}
+
+.about ul i {
+  margin-right: 5px;
+  color: var(--bg-clr-muted);
+  line-height: 0;
+}
+.about ul li span, .about-me {
+  color: var(--bg-clr-light);
+}
+.about p:last-child {
+  margin-bottom: 0;
+}
+
+.about-profile {
+  border-radius: 0.2rem;
+  background-color: var(--bg-clr-muted);
+}
+
+#about .btn {
+  background-color: transparent;
+  border: transparent;
+  text-decoration: underline;
+  text-underline-offset: 0.2rem;
+  font-size: 0.7rem;
+}
+#about .btn:hover {
+  opacity: 0.9;
+}
+
+/*--------------------------------------------------------------
+# skills
+--------------------------------------------------------------*/
+
+.skills-content {
+  padding-top: 3rem;
+}
+
+.percentage {
+  position: relative;
+  width: 100%;
+  height: 0.7rem;
+  background-color: var(--bg-clr-muted);
+  display: block;
+  margin: 0 0 0.5rem 0;
+}
+.percentage-amount {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: var(--bg-clr-light);
+}
+
+.skills .progress {
+  height: 3.75rem;
+  display: block;
+  background: none;
+  border-radius: 0;
+}
+
+.skills .progress .skill {
+  padding: 0;
+  margin: 0 0 0.375rem 0;
+  text-transform: uppercase;
+  display: block;
+  font-weight: 600;
+  color: var(--bg-clr-light);
+}
+
+.skills .progress .skill .val {
+  float: right;
+  font-style: normal;
+}
+
+
+/*--------------------------------------------------------------
+# Resume
+--------------------------------------------------------------*/
+.resume .resume-title {
+  font-size: var(--fs-500);
+  font-weight: var(--fw-bold);
+  margin: 1.25rem 0;
+  color: var(--bg-clr-light);
+}
+
+.resume .resume-item {
+  font-size: var(--fs-400);
+  padding: 0 0 1.25rem 1.25rem;
+  margin-top: -0.125rem;
+  border-left: 0.125rem solid var(--bg-clr-muted);
+  position: relative;
+}
+
+.resume .resume-item h4 {
+  line-height: var(--fs-450);
+  font-size: var(--fs-450);
+  font-weight: var(--fw-semi-bold);
+  text-transform: uppercase;
+  color: var(--bg-clr-light);
+  margin-bottom: 0.625rem;
+}
+
+.resume .resume-item h5 {
+  font-size: var(--fs-300);
+  color: var(--bg-clr-light);
+  background: var(--bg-clr-2);
+  padding: 0.313rem 0.938rem;
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: 0.625rem;
+}
+
+.resume .resume-item p {
+  font-size: var(--fs-400);
+  font-weight: var(--fw-semi-bold);
+  color: var(--bg-clr-light);
+  padding: 0;
+  margin: 0;
+}
+
+.resume-margin {
+  margin-bottom: var(--fs-450) !important;
+}
+
+.resume .resume-item em {
+  font-size: var(--fs-350);
+  color: var(--bg-clr-muted) !important;
+}
+
+.resume .resume-item ul {
+  margin-top: 1rem;
+  padding-left: 1.25rem;
+}
+
+.resume .resume-item ul li {
+  padding-bottom: 10px;
+  font-size: var(--fs-350);
+}
+
+.resume .resume-item:last-child {
+  padding-bottom: 0;
+}
+
+.resume .resume-item::before {
+  content: "";
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50px;
+  left: -9px;
+  top: 0;
+  background: var(--bg-clr-muted);
+  border: 2px solid var(--bg-clr-light);
+}
+
+/* FOOTER */
 
   .sns-icons-footer {
     color: var(--bg-clr-light) !important;

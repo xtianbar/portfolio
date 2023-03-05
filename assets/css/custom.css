@@ -173,7 +173,7 @@ a {
     background-size: cover;
     background-position: center;
   }
-  .navbar-brand img {
+  .profile-thumbnail {
     border: 0.40rem solid var(--bg-clr-light);
     width: 60% !important;
   }
@@ -669,6 +669,10 @@ section {
 .resume .resume-item em {
   font-size: var(--fs-350);
   color: var(--bg-clr-2) !important;
+}
+
+.resume-margin {
+  margin-bottom: var(--fs-450) !important;
 }
 
 .resume .resume-item ul {
