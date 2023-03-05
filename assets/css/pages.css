@@ -529,6 +529,14 @@ a {
   opacity: 0.9;
 }
 
+#instafeed-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+}
+#instafeed-container video{
+  display: none;
+}
 /*--------------------------------------------------------------
 # skills
 --------------------------------------------------------------*/

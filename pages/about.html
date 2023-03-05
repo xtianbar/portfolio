@@ -336,7 +336,7 @@
       
       <!-- END OF RESUME SECTION -->
     
-   
+      <div id="instafeed-container"></div>
     <!-- START OF FOOTER SECTION -->
 
     <div class="container">
@@ -395,6 +395,16 @@
 }
     window.addEventListener('scroll',scrollValue);
 
+  </script>
+  <script src="../assets/js/instafeed.js"></script>
+  <script type="text/javascript">
+    var userFeed = new Instafeed({
+      get: 'user',
+      target: "instafeed-container",
+      resolution: 'low_resolution',
+      accessToken: 'IGQVJWaVdIREt0UFU2X2VwMlBDcHEwQmtyLTFqU2FoT1lIa2lyYjFRc09BN0hEUkJTcV9acEh6NFhtQkdMN0JqcXFOQkVtV2otdThfbmQ2S1Y0U0R1MmY0ZAjV2OXk0QWY0ZAkFSWHJyZAXlrSXpaRzRvegZDZD'
+    });
+    userFeed.run();
   </script>
 </body>
 </html>
