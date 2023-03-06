@@ -749,6 +749,10 @@ section {
   overflow: hidden;
   z-index: 1;
 }
+.portfolio-wrap img:hover {
+  transform: scale(1.125);
+  transition: 0.5ms ease-in-out !important;
+}
 
 .portfolio .portfolio-wrap .portfolio-links {
   opacity: 1;
