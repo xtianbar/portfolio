@@ -330,6 +330,10 @@ a {
     padding: 2rem 5rem 2rem 5rem;
     /* margin: 4rem; */
   }
+  .gameplay {
+    width: 50rem;
+    height: auto;
+  }
 }
 
 @media (max-width: 991px){
@@ -464,7 +468,6 @@ a {
   transition: 0.3s;
   width: 50%;
   padding: 0.5rem 0;
-  border-radius: 0.5rem;
 }
 
 .portfolio .portfolio-wrap .portfolio-links a:hover {
@@ -487,6 +490,29 @@ a {
 .portfolio .portfolio-wrap:hover .portfolio-links {
   opacity: 1;
   bottom: 0;
+} 
+
+.portfolio .gameplay-title {
+  padding: 0;
+  margin: 2.5rem auto 3rem auto;
+  list-style: none;
+  text-align: center;
+  background: var(--bg-clr-light);
+  border-radius: 50px;
+  padding: 2px 15px;
+}
+
+.portfolio .gameplay-title li {
+  cursor: default;
+  display: inline-block;
+  padding: 10px 15px 8px 15px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--bg-clr-2);
+  margin-bottom: 5px;
+  transition: all 0.3s ease-in-out;
 }
 
 /*--------------------------------------------------------------
